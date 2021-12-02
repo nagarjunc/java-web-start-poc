@@ -26,4 +26,4 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    filePath: './master/azureShellScript.sh'
+    filePath: './azureShellScript.sh'
