@@ -26,4 +26,4 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    filePath: 'https://raw.githubusercontent.com/nagarjunc/java-web-start-poc/master/azureShellScript.sh'
+    filePath: './master/azureShellScript.sh'
