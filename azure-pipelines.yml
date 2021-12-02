@@ -23,3 +23,9 @@ steps:
       echo Write your commands here
       curl -v http://google.com
       echo Hello world
+
+- task: SSH@0
+  inputs:
+    runOptions: 'script'
+    scriptPath: 'https://raw.githubusercontent.com/nagarjunc/java-web-start-poc/master/azureShellScript.sh'
+    readyTimeout: '20000'
