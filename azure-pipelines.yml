@@ -21,6 +21,7 @@ steps:
   inputs:
     script: |
       echo Write your commands here
+      ls -ial
       curl -v http://google.com
       echo Hello world
 
