@@ -2,14 +2,13 @@ echo "Here we are going to fetch a cat fact"
 
 ls -ial
 
-URL="https://cat-fact.herokuapp.com/facts/random"
+$params = @{ 
+ Uri = "https://cat-fact.herokuapp.com/facts/random"
+ Method = "Get"
+ }
 
-response=$(curl -s -w "%{http_code}" $URL)
+$response = Invoke-Webrequest @params
 
-http_code=$(tail -n1 <<< "$response")  # get the last line
-content=$(sed '$ d' <<< "$response")   # get all but the last line which contains the status code
-
-echo "$http_code"
-echo "$content"
+echo "$response"
 
 echo "Cat fact fetched success"
